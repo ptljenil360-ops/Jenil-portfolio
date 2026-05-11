@@ -1,0 +1,42 @@
+.video-intro-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Place it behind the content */
+  overflow: hidden;
+  background-color: #000;
+}
+
+.fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+
+/* Ensure the main content is transparent or handles the video background */
+#smooth-wrapper {
+  background: transparent !important;
+}
+
+.container-main {
+  background: transparent !important;
+}
+
+.landing-section {
+  background: transparent !important;
+}

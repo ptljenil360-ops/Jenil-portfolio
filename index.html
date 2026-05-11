@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenil Patel — Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Jenil Patel — a web developer who builds websites that work. Explore featured projects and capabilities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ─── Loading Screen ─── -->
+    <div id="loading-fallback">
+        <div class="loader-ring"></div>
+        <p class="loader-text" data-text="Initializing Sequence...">Initializing Sequence...</p>
+    </div>
+
+    <!-- ─── HERO: Two-Phase Cinematic Intro ─── -->
+    <section id="hero">
+
+        <!-- Phase 1: Intro video — plays once, then hides -->
+        <video id="hero-video" muted playsinline preload="auto">
+            <source src="assets/Cyberpunk_city_upward_movement_202605021713.mp4" type="video/mp4">
+        </video>
+
+        <!-- Phase 2: Cloud loop video — metadata preloading to save bandwidth -->
+        <video id="cloud-video" muted playsinline preload="metadata" loop>
+            <source src="assets/Clouds_hovering_over_city_202605030014.mp4" type="video/mp4">
+        </video>
+
+        <!-- Atmosphere overlays on top of the loop video -->
+        <div id="hero-atmosphere" class="atmosphere-hidden">
+            <div id="neon-pulse"></div>
+            <div id="god-rays">
+                <div class="ray ray-1"></div>
+                <div class="ray ray-2"></div>
+                <div class="ray ray-3"></div>
+            </div>
+        </div>
+
+        <!-- Floating Particles Canvas -->
+        <canvas id="particles-canvas"></canvas>
+
+        <!-- Bottom Gradient (always visible) -->
+        <div id="video-overlay-gradient"></div>
+
+        <!-- Text Overlay — fades in after Phase 2 starts -->
+        <div id="overlay-content">
+            <h1>Hi, I'm <span class="highlight">Jenil Patel</span></h1>
+            <p>I build websites that work</p>
+            <a href="#about" class="cta" id="cta-btn">See My Work</a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scroll-indicator">
+            <p>Scroll Down</p>
+            <div class="arrow"></div>
+        </div>
+
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section id="about" class="content-section">
+        <div class="section-container">
+            <h2 class="gsap-reveal glitch-header" data-text="About Me">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I am an emerging developer specializing in AI-accelerated web creation. By leveraging the power of advanced AI tools, I build high-quality, modern websites with exceptional speed and precision.</p>
+                    <p>As a freelancer with 4 months of dedicated experience, I focus on delivering functional, aesthetically pleasing digital solutions. I pride myself on rapid learning, attention to detail, and a commitment to helping local businesses establish a strong online presence.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>4</h3>
+                        <span>Months Experience</span>
+                    </div>
+                    <div class="stat">
+                        <h3>3+</h3>
+                        <span>Real Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ─── PROJECTS ─── -->
+    <section id="projects" class="content-section">
+        <div class="section-container">
+            <div class="project-header">
+                <span class="eyebrow gsap-reveal">Sector: Work</span>
+                <h2 class="gsap-reveal glitch-header" data-text="Featured Projects">Featured Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Fitness Factory Petlad -->
+                <article class="project-card gsap-project" data-project="01">
+                    <div class="project-frame">
+                        <div class="project-img" style="background-image: url('assets/project-fitness.png')"></div>
+                        <div class="project-scanline"></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-tag">Full Stack</span>
+                            <span class="project-date">2026</span>
+                        </div>
+                        <h3>Fitness Factory Petlad</h3>
+                        <p>A high-performance digital presence for a premium local gym. Focused on speed, mobile accessibility, and aggressive branding.</p>
+                        <div class="project-actions">
+                            <a href="https://fitnessfactorypetlad.co.in" target="_blank" class="project-btn">
+                                <span>View The Site</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SKILLS ─── -->
+    <section id="skills" class="content-section">
+        <div class="section-container">
+            <div class="project-header">
+                <span class="eyebrow gsap-reveal">System: Capabilities</span>
+                <h2 class="gsap-reveal glitch-header" data-text="Skills & Technologies">Skills & Technologies</h2>
+            </div>
+            <div class="skills-container gsap-reveal">
+                <span class="skill-tag">Git/GitHub</span>
+                <span class="skill-tag">Web Development</span>
+                <span class="skill-tag">PWA Development</span>
+                <span class="skill-tag">UI/UX Design</span>
+                <span class="skill-tag">Database Management</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section id="contact" class="content-section">
+        <div class="section-container text-center">
+            <div class="project-header" style="margin-bottom: 2rem;">
+                <span class="eyebrow gsap-reveal">Protocol: Outreach</span>
+                <h2 class="gsap-reveal glitch-header" data-text="Let's Connect">Let's Connect</h2>
+            </div>
+            <p class="gsap-reveal">Ready to build something amazing? Drop me a line.</p>
+            <a  class="cta contact-btn">Initialize Connection</a>
+        </div>
+        <!-- ─── Connect With Us — Social Links ─── -->
+        <div class="social-connect-wrapper gsap-reveal">
+            <div class="social-connect-container">
+                <div class="social-icons-row">
+
+                    <!-- Instagram -->
+                    <a href="#" class="social-icon" id="social-instagram" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon-circle social-icon--instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </div>
+                        <span class="social-icon-label">Instagram</span>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/919999999999" class="social-icon" id="social-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon-circle social-icon--whatsapp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </div>
+                        <span class="social-icon-label">WhatsApp</span>
+                    </a>
+
+                    <!-- Gmail -->
+                    <a href="mailto:hello@example.com" class="social-icon" id="social-gmail">
+                        <div class="social-icon-circle social-icon--gmail">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                            </svg>
+                        </div>
+                        <span class="social-icon-label">Gmail</span>
+                    </a>
+
+                    <!-- Website / Contact Form -->
+                    <a href="#contact" class="social-icon" id="social-website">
+                        <div class="social-icon-circle social-icon--website">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.85 2.06a9.94 9.94 0 00-4.29 2.2A9.93 9.93 0 004.5 8.88h3.4c.24-2.57.8-4.8 1.6-6.44a10.1 10.1 0 011.65-.38zM12 2c-.82 0-1.97 1.91-2.56 5h5.12C13.97 3.91 12.82 2 12 2zm.85.06c.57.1 1.12.22 1.65.38.8 1.64 1.36 3.87 1.6 6.44h3.4a9.93 9.93 0 00-2.36-4.62 9.94 9.94 0 00-4.29-2.2zM4.07 9.88A9.97 9.97 0 002 12c0 .72.08 1.43.22 2.12h3.9a22.3 22.3 0 010-4.24h-2.05zm3.05 0a21.2 21.2 0 000 4.24h5.76a21.2 21.2 0 000-4.24H7.12zm6.76 0a22.3 22.3 0 010 4.24h3.9c.14-.69.22-1.4.22-2.12s-.08-1.43-.22-2.12h-3.9zm-9.38 5.24A9.93 9.93 0 006.86 19.74a9.94 9.94 0 004.29 2.2c-.57-.1-1.12-.22-1.65-.38-.8-1.64-1.36-3.87-1.6-6.44H4.5zm4.94 0c.59 3.09 1.74 5 2.56 5 .82 0 1.97-1.91 2.56-5H9.44zm6.16 0c-.24 2.57-.8 4.8-1.6 6.44.53.16 1.08.28 1.65.38a9.94 9.94 0 004.29-2.2 9.93 9.93 0 002.36-4.62h-3.4z"/>
+                            </svg>
+                        </div>
+                        <span class="social-icon-label">Website</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Jenil Patel. All systems online.</p>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
